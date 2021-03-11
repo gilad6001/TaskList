@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="public/todo.js"></script>
+</head>
+
+<body class="bg-info text-light" >
+<div class="container-fluid">
+    <div style="text-align: center">
+        <h1 class="text-light">WORK TO-DOS</h1>
+        <h3 id = "text_completed" class="text-warning" style="display:none">Completed tasks </h3>
+        <button id = "bt_back" style="display: none ;text-align: center;" class="btn btn-primary"   > back</button>
+        <p  id = "title_1"  >Enter text into the input field  to add item to your list</p>
+        <p id = "title_2" >Click the button to mark it as complete</p>
+        <button type="button" id = "completed"  class="btn btn-primary " >Show completed</button>
+
+    </div>
+    <br/>
+
+    <div  class="row col-xs 12 col-md-12" >
+        <input  class="col-lg-8" onfocus="this.value=''" value="" id="text_input"  placeholder="New item...">
+        <button class="btn btn-primary col-1"   id = "but_submit"> add </button>
+    </div>
+
+    <br/>
+    <br/>
+
+    <ol  id="list1" class="list-group col-9" >
+        <li class="alert alert-warning" id = "empty" style="display: none">
+            <strong>Error!</strong> Please enter a none empty todo
+        </li>
+
+        <li class="alert alert-danger " id = "exist" style="display: none">
+            <strong>Error!</strong> This todo is already exists!
+        </li>
+    </ol>
+
+
+</div>
+
+</body>
+</html>
+
